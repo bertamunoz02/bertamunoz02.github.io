@@ -3,199 +3,291 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Berta Muñoz Aranguren · Farmacia & divulgación</title>
-<meta name="description" content="Berta Muñoz Aranguren, farmacéutica y divulgadora científica. Próximo máster en industria farmacéutica. Buscando mi primer paso en biotech y big pharma.">
+<title>Berta Muñoz Aranguren</title>
+<meta name="description" content="Berta Muñoz Aranguren. Bióloga especializada en investigación clínica y ensayos clínicos. Divulgadora científica (Con B de Biología). Máster de Acceso a Industria Farmacéutica, Biotecnológica y de Tecnología Sanitaria.">
 <meta property="og:title" content="Berta Muñoz Aranguren">
-<meta property="og:description" content="Farmacia, divulgación científica y ganas de construir carrera en la industria farmacéutica.">
-<meta property="og:image" content="foto.jpg">
+<meta property="og:description" content="Bióloga · Investigación clínica y ensayos clínicos · Divulgación científica. Pharma, biotech y health tech.">
+<meta property="og:image" content="https://bertamunoz02.github.io/berta.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,300..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f7f6f1;--ink:#17201f;--muted:#5d6866;--line:#e2e0d7;
-  --teal:#0f766e;--teal-soft:#d9f0ec;--pill:#eef2ef;--card:#ffffff;
-}
-@media (prefers-color-scheme:dark){
-  :root{--bg:#101615;--ink:#eef2ef;--muted:#9aa8a4;--line:#243230;
-  --teal:#5fd3c4;--teal-soft:#153a36;--pill:#1a2624;--card:#161f1e}
+  --paper:#F1F2F4;--ink:#111418;--muted:#5A6170;--rule:#C9CDD6;
+  --blue:#1E3FD8;--mark:#FFE14D;
+  --sans:"Archivo",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --gutter:clamp(20px,5vw,72px);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.1;margin:0 0 .5em;letter-spacing:-.01em}
-h1{font-size:clamp(2.4rem,6vw,4.2rem)}
-h2{font-size:clamp(1.6rem,3vw,2.2rem)}
-h3{font-size:1.15rem}
-p{margin:0 0 1em}
-a{color:var(--teal)}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-section{padding:72px 0;border-top:1px solid var(--line)}
-.eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;font-variation-settings:"wdth" 100;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+h1,h2,h3{margin:0;font-weight:800;line-height:.95;letter-spacing:-.02em;text-wrap:balance}
+p{margin:0}
+.mono{font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;text-transform:uppercase}
+.page{max-width:1280px;margin:0 auto;padding-inline:var(--gutter);overflow-x:clip}
+::selection{background:var(--mark);color:var(--ink)}
 
-/* nav */
-nav{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:9}
-nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
-nav b{font-family:Fraunces,serif;font-size:1.1rem}
-nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
-nav a{color:var(--ink);text-decoration:none;font-size:.9rem;font-weight:500}
-nav a:hover{color:var(--teal)}
-@media(max-width:640px){nav ul{display:none}}
+/* ---------- top bar ---------- */
+.bar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:18px;border-bottom:1.5px solid var(--ink)}
+.bar .mono{color:var(--muted);white-space:nowrap}
+.bar nav{display:flex;gap:26px}
+.bar nav a{text-decoration:none;font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.bar nav a:hover{color:var(--blue)}
+@media(max-width:860px){
+  .bar{flex-wrap:wrap;padding-block:14px 0;gap:10px}
+  .bar > .mono:last-child{display:none}
+  .bar nav{flex-basis:100%;gap:20px;overflow-x:auto;padding-block:10px 14px;margin-top:2px;border-top:1px solid var(--rule);scrollbar-width:none}
+  .bar nav::-webkit-scrollbar{display:none}
+}
 
-/* hero */
-header{padding:80px 0 72px}
-.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center}
-@media(max-width:760px){.hero{grid-template-columns:1fr}}
-.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:52ch}
-.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:600;text-decoration:none;border:1.5px solid var(--teal);transition:transform .15s}
-.btn:hover{transform:translateY(-1px)}
-.btn.primary{background:var(--teal);color:#fff}
-.btn.ghost{color:var(--teal)}
-.photo{aspect-ratio:4/5;border-radius:24px;background:var(--teal-soft);overflow:hidden;position:relative;box-shadow:0 30px 60px -30px rgba(0,0,0,.35)}
-.photo img{width:100%;height:100%;object-fit:cover;display:block}
-.photo .ph{position:absolute;inset:0;display:grid;place-items:center;color:var(--teal);font-family:Fraunces,serif;font-size:5rem}
-.tag{display:inline-block;background:var(--teal-soft);color:var(--teal);padding:6px 14px;border-radius:999px;font-size:.85rem;font-weight:600;margin-bottom:20px}
+/* ---------- hero ---------- */
+.hero{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:auto 1fr;gap:0 clamp(24px,4vw,56px);padding-top:clamp(28px,4.5vw,64px);position:relative}
+.hero .name{grid-column:1;grid-row:1;font-size:clamp(3.2rem,7.6vw,6.4rem);font-variation-settings:"wdth" 118;line-height:.88;letter-spacing:-.035em;text-transform:uppercase;margin-left:-.04em}
+.hero .name span{display:block}
+.hero .name .thin{font-weight:300;font-variation-settings:"wdth" 96;letter-spacing:-.02em}
+.hero .intro{grid-column:1;grid-row:2;align-self:start;padding-bottom:clamp(40px,5vw,72px)}
+.hero .lede{margin-top:clamp(26px,3.5vw,44px);max-width:36ch;font-size:clamp(1.12rem,1.6vw,1.4rem);line-height:1.38}
+.hero .lede em{font-style:normal;background:linear-gradient(transparent 58%,var(--mark) 58%,var(--mark) 92%,transparent 92%);padding:0 .05em}
+.hero .meta{display:grid;grid-template-columns:auto auto;gap:6px 28px;margin-top:32px;padding-top:18px;border-top:1.5px solid var(--ink);width:max-content;max-width:100%}
+.hero .meta .mono{color:var(--muted)}
+.hero .meta b{font-family:var(--mono);font-weight:500;font-size:.82rem}
+@media(max-width:560px){.hero .meta{grid-template-columns:1fr;gap:2px;width:100%}.hero .meta b{margin-bottom:10px}}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{font-family:var(--mono);font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;padding:15px 22px;border:1.5px solid var(--ink);display:inline-flex;align-items:center;gap:10px;transition:background .15s,color .15s}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn.solid:hover{background:var(--blue);border-color:var(--blue)}
+.btn.line:hover{background:var(--ink);color:var(--paper)}
+.btn svg{width:14px;height:14px}
+.figure{grid-column:2;grid-row:1/3;position:relative;align-self:start;z-index:1;max-width:520px;justify-self:end;width:100%}
+.figure .block{position:absolute;inset:18% 0 0 8%;background:var(--blue)}
+.figure .block::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 23px,rgba(255,255,255,.09) 23px 24px);pointer-events:none}
+.figure img{position:relative;display:block;width:100%;height:auto;filter:drop-shadow(0 24px 30px rgba(10,20,80,.35))}
+.figure .note{position:absolute;left:-6%;bottom:9%;background:var(--mark);padding:12px 14px;max-width:240px;font-family:var(--mono);font-size:.72rem;line-height:1.45;letter-spacing:.02em;transform:rotate(-2.5deg);box-shadow:0 12px 24px -12px rgba(0,0,0,.4)}
+.figure .lot{position:absolute;right:0;top:calc(18% + 14px);writing-mode:vertical-rl;color:#fff;opacity:.85;font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;padding-right:12px}
+@media(max-width:860px){
+  .hero{grid-template-columns:1fr;grid-template-rows:auto;padding-top:20px}
+  .hero .name,.hero .intro,.figure{grid-column:1;grid-row:auto}
+  .figure{order:-1;max-width:440px;margin:0 0 28px}
+  .figure .note{left:0}
+  .hero .intro{padding-bottom:36px}
+  .hero .lede{margin-top:22px}
+}
 
-/* grids & cards */
-.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
-.card .ico{width:40px;height:40px;border-radius:12px;background:var(--teal-soft);display:grid;place-items:center;margin-bottom:14px;color:var(--teal)}
-.card p{color:var(--muted);margin:0;font-size:.95rem}
-.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.pills span{background:var(--pill);border:1px solid var(--line);padding:6px 12px;border-radius:999px;font-size:.85rem}
+/* ---------- strip ---------- */
+.strip{border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);display:grid;grid-template-columns:repeat(4,1fr)}
+.strip div{padding:16px 18px 16px 0;border-right:1px solid var(--rule)}
+.strip div:last-child{border-right:0}
+.strip div + div{padding-left:18px}
+.strip .mono{color:var(--muted);display:block;margin-bottom:4px}
+.strip p{font-weight:500;font-size:.95rem;line-height:1.3}
+@media(max-width:860px){.strip{grid-template-columns:1fr 1fr}.strip div:nth-child(2){border-right:0}.strip div:nth-child(3){padding-left:0;border-top:1px solid var(--rule)}.strip div:nth-child(4){border-top:1px solid var(--rule)}}
+@media(max-width:480px){.strip{grid-template-columns:1fr}.strip div{border-right:0;padding-left:0!important;border-top:1px solid var(--rule)}.strip div:first-child{border-top:0}}
 
-/* two-col about */
-.about{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-@media(max-width:760px){.about{grid-template-columns:1fr}}
-.about p{color:var(--muted)}
-.facts{list-style:none;padding:0;margin:0;display:grid;gap:14px}
-.facts li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
-.facts li b{min-width:120px;color:var(--ink)}
-.facts li span{color:var(--muted)}
+/* ---------- sections ---------- */
+.sec{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,4vw,64px);padding-block:clamp(48px,8vw,112px);border-bottom:1px solid var(--rule)}
+.sec .head{position:sticky;top:24px;align-self:start}
+.sec .num{font-family:var(--mono);color:var(--blue);font-size:.85rem;font-weight:500;letter-spacing:.06em;display:block;margin-bottom:14px}
+.sec h2{font-size:clamp(1.9rem,3.4vw,3rem);font-variation-settings:"wdth" 108;line-height:1;letter-spacing:-.025em;max-width:14ch}
+.sec .head .sub{margin-top:18px;color:var(--muted);max-width:30ch;font-size:.95rem;line-height:1.5}
+.sec .body{max-width:62ch}
+.sec .body > p{font-size:1.1rem;line-height:1.6}
+.sec .body > p + p{margin-top:1.1em}
+.sec .body p.big{font-size:clamp(1.3rem,2.2vw,1.9rem);line-height:1.25;font-weight:500;letter-spacing:-.015em;max-width:30ch}
+@media(max-width:860px){.sec{grid-template-columns:1fr;gap:24px}.sec .head{position:static}.sec h2{max-width:none}}
 
-/* timeline */
-.tl{list-style:none;padding:0;margin:0;border-left:2px solid var(--line)}
-.tl li{position:relative;padding:0 0 32px 28px}
-.tl li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px var(--bg)}
-.tl small{display:block;color:var(--teal);font-weight:600;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
-.tl p{color:var(--muted);margin:4px 0 0}
+.rows{margin:0;padding:0;list-style:none;border-top:1.5px solid var(--ink)}
+.rows li{display:grid;grid-template-columns:minmax(120px,1fr) minmax(0,2.4fr);gap:20px;padding:18px 0;border-bottom:1px solid var(--rule)}
+.rows .k{font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);padding-top:4px}
+.rows .v{font-size:1.05rem;line-height:1.45}
+.rows .v b{font-weight:600}
+.rows .v small{display:block;color:var(--muted);font-size:.92rem;margin-top:3px}
+@media(max-width:480px){.rows li{grid-template-columns:1fr;gap:6px}}
 
-/* social */
-.social a{display:flex;align-items:center;gap:16px;text-decoration:none;color:var(--ink)}
-.social .card{transition:border-color .15s,transform .15s}
-.social .card:hover{border-color:var(--teal);transform:translateY(-2px)}
-.social svg{width:28px;height:28px;flex:none}
-.social small{display:block;color:var(--muted)}
+.ind{list-style:none;margin:32px 0 0;padding:0;border-top:1.5px solid var(--ink)}
+.ind li{display:grid;grid-template-columns:52px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.ind .code{font-family:var(--mono);font-size:.78rem;color:var(--blue);font-weight:500}
+.ind h3{font-size:1.25rem;font-weight:600;letter-spacing:-.01em;line-height:1.15}
+.ind p{color:var(--muted);margin-top:6px;font-size:.98rem;max-width:52ch}
+@media(max-width:480px){.ind li{grid-template-columns:40px 1fr;gap:10px}}
 
-/* contact */
-.contact{text-align:center;padding:90px 0}
-.contact p{max-width:48ch;margin:0 auto 28px;color:var(--muted)}
-footer{padding:28px 0;color:var(--muted);font-size:.85rem;text-align:center;border-top:1px solid var(--line)}
+.tl{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--ink)}
+.tl li{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--rule)}
+.tl .when{font-family:var(--mono);font-size:.8rem;letter-spacing:.04em;color:var(--muted);padding-top:5px;font-variant-numeric:tabular-nums}
+.tl .when.now{color:var(--blue);font-weight:500}
+.tl h3{font-size:1.2rem;font-weight:600;line-height:1.2;letter-spacing:-.01em}
+.tl p{color:var(--muted);margin-top:6px;font-size:.98rem;max-width:52ch}
+@media(max-width:480px){.tl li{grid-template-columns:1fr;gap:6px}}
+
+.social{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--ink)}
+.social a{display:grid;grid-template-columns:minmax(110px,1fr) minmax(0,2fr) 40px;gap:20px;align-items:center;padding:24px 0;border-bottom:1px solid var(--rule);text-decoration:none;transition:padding-left .2s}
+.social a:hover{padding-left:12px}
+.social a:hover .arrow{background:var(--blue);color:#fff;border-color:var(--blue)}
+.social .plat{font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.social .handle{font-size:clamp(1.25rem,2.4vw,1.9rem);font-weight:600;letter-spacing:-.02em;line-height:1;overflow-wrap:anywhere}
+.social .handle small{display:block;font-size:.9rem;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:6px}
+.social .arrow{width:40px;height:40px;border:1.5px solid var(--ink);display:grid;place-items:center;transition:background .15s,color .15s}
+.social .arrow svg{width:16px;height:16px}
+@media(max-width:560px){.social a{grid-template-columns:1fr 40px;gap:8px 16px}.social .plat{grid-column:1/-1}}
+
+.contact{padding-block:clamp(56px,9vw,128px);border-top:1.5px solid var(--ink)}
+.contact .mono{color:var(--blue);display:block;margin-bottom:18px}
+.contact h2{font-size:clamp(2.1rem,5.6vw,5.4rem);font-variation-settings:"wdth" 112;letter-spacing:-.03em;line-height:.95;max-width:20ch}
+.contact .mail{display:inline-block;margin-top:34px;font-size:clamp(1.15rem,2.6vw,2rem);font-weight:500;letter-spacing:-.02em;text-decoration:none;border-bottom:3px solid var(--mark);padding-bottom:2px;transition:border-color .15s;overflow-wrap:anywhere}
+.contact .mail:hover{border-color:var(--blue)}
+.contact .alt{margin-top:22px;color:var(--muted);font-size:1rem;max-width:52ch}
+.contact .alt a{color:var(--ink)}
+
+footer{border-top:1.5px solid var(--ink);padding-block:20px 40px;display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between;color:var(--muted)}
+
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero > *{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+.hero .figure{animation-delay:.1s}
 </style>
 </head>
 <body>
+<div class="page">
 
-<nav><div class="wrap">
-  <b>Berta Muñoz</b>
-  <ul>
-    <li><a href="#sobre-mi">Sobre mí</a></li>
-    <li><a href="#formacion">Formación</a></li>
-    <li><a href="#divulgacion">Divulgación</a></li>
-    <li><a href="#intereses">Intereses</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-  </ul>
-</div></nav>
+<div class="bar">
+  <span class="mono">Berta Muñoz Aranguren · Perfil profesional</span>
+  <nav>
+    <a href="#perfil">Perfil</a>
+    <a href="#areas">Áreas</a>
+    <a href="#competencias">Competencias</a>
+    <a href="#recorrido">Recorrido</a>
+    <a href="#divulgacion">Divulgación</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <span class="mono">2026 · España</span>
+</div>
 
-<header class="wrap">
-  <div class="hero">
-    <div>
-      <span class="tag">🔬 Abierta a prácticas y primer empleo en industria farma</span>
-      <h1>Farmacia, ciencia<br>y ganas de contarla.</h1>
-      <p class="lead">Soy Berta, graduada en Farmacia y divulgadora científica. Este curso empiezo un máster en industria farmacéutica y busco mi primer paso en una <strong>biotech</strong> o una <strong>big pharma</strong>.</p>
-      <div class="cta">
-        <a class="btn primary" href="https://www.linkedin.com/in/berta-mu%C3%B1oz-aranguren-686728281/" target="_blank" rel="noopener">Ver LinkedIn</a>
-        <a class="btn ghost" href="cv.pdf">Descargar CV</a>
-      </div>
+<header class="hero">
+  <h1 class="name"><span>Berta</span><span>Muñoz</span><span class="thin">Aranguren</span></h1>
+  <div class="intro">
+    <p class="lede">Bióloga especializada en <em>investigación clínica</em> y <em>ensayos clínicos</em>. Con experiencia en investigación y transferencia de tecnología, y fundadora de un proyecto de divulgación científica. Quiero contribuir al desarrollo de fármacos en pharma, biotech y health tech.</p>
+    <div class="meta">
+      <span class="mono">Formación</span><b>Grado en Biología · Máster en Especialidades Biológicas Hospitalarias</b>
+      <span class="mono">En curso</span><b>Máster de Acceso a Industria Farmacéutica · FarmaLeaders Talento</b>
+      <span class="mono">Estado</span><b>Disponible para prácticas y primer empleo</b>
     </div>
-    <div class="photo">
-      <!-- TODO: sube foto.jpg (formato vertical) y borra el div .ph -->
-      <div class="ph">B</div>
-      <!-- <img src="foto.jpg" alt="Berta Muñoz Aranguren"> -->
+    <div class="cta">
+      <a class="btn solid" href="https://www.linkedin.com/in/berta-mu%C3%B1oz-aranguren-686728281/" target="_blank" rel="noopener">LinkedIn <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 13 13 3M5 3h8v8"/></svg></a>
+      <a class="btn line" href="cv.pdf">Descargar CV</a>
     </div>
+  </div>
+  <div class="figure">
+    <div class="block"></div>
+    <span class="lot">Clinical Research · Biotech · Health tech</span>
+    <img src="berta.webp" alt="Berta Muñoz Aranguren" width="1000" height="1333" fetchpriority="high">
+    <div class="note">Certificación ICH-GCP E6 (R3)<br>The Global Health Network</div>
   </div>
 </header>
 
-<section id="sobre-mi"><div class="wrap about">
-  <div>
-    <div class="eyebrow">Sobre mí</div>
-    <h2>Del laboratorio a la pantalla, y de la pantalla a la industria.</h2>
-    <p>Me gusta entender cómo funciona un fármaco y, sobre todo, explicarlo para que cualquiera lo entienda. Llevo tiempo divulgando en redes sobre farmacia, salud y ciencia, y eso me ha enseñado algo que la industria valora: comunicar con rigor y con claridad a la vez.</p>
-    <p>Ahora quiero llevar esa mezcla de conocimiento técnico y comunicación al lugar donde los medicamentos se desarrollan, se registran y llegan al paciente.</p>
-  </div>
-  <ul class="facts">
-    <li><b>Formación</b><span>Grado en Farmacia · TODO universidad</span></li>
-    <li><b>Próximo paso</b><span>Máster en Industria Farmacéutica · TODO nombre y centro (2026–2027)</span></li>
-    <li><b>Ubicación</b><span>TODO ciudad · disponibilidad para moverme</span></li>
-    <li><b>Idiomas</b><span>Español (nativo) · Inglés (TODO nivel)</span></li>
-    <li><b>Busco</b><span>Prácticas / junior en Medical Affairs, Regulatory, MSL, Market Access o Comunicación científica</span></li>
-  </ul>
-</div></section>
+<div class="strip">
+  <div><span class="mono">Formación</span><p>Grado en Biología · Universidad de Córdoba</p></div>
+  <div><span class="mono">En curso</span><p>Máster de Acceso a Industria Farmacéutica, Biotecnológica y de Tecnología Sanitaria · 2026–27</p></div>
+  <div><span class="mono">Idiomas</span><p>Español nativo · Inglés B2 First (Cambridge)</p></div>
+  <div><span class="mono">Divulgación</span><p>Con B de Biología · desde 2024</p></div>
+</div>
 
-<section id="formacion"><div class="wrap">
-  <div class="eyebrow">Formación y experiencia</div>
-  <h2>Recorrido</h2>
-  <ul class="tl" style="margin-top:32px">
-    <li><small>2026 – 2027</small><h3>Máster en Industria Farmacéutica</h3><p>TODO centro. Enfoque en desarrollo, registro y acceso al mercado de medicamentos.</p></li>
-    <li><small>TODO años</small><h3>Grado en Farmacia</h3><p>TODO universidad. TODO: TFG, menciones, asignaturas destacadas.</p></li>
-    <li><small>TODO años</small><h3>Prácticas tuteladas en oficina de farmacia / hospital</h3><p>TODO: atención farmacéutica, dispensación, seguimiento de tratamientos.</p></li>
-    <li><small>2023 – hoy</small><h3>Divulgación científica en redes</h3><p>Creación de contenido sobre farmacia y salud en Instagram y TikTok. TODO: seguidores, visualizaciones, colaboraciones.</p></li>
-  </ul>
-</div></section>
-
-<section id="divulgacion"><div class="wrap">
-  <div class="eyebrow">Divulgación</div>
-  <h2>Donde cuento la ciencia</h2>
-  <p style="color:var(--muted);max-width:56ch">Hago contenido corto y riguroso sobre medicamentos, mitos de salud y vida de estudiante de Farmacia. Es mi forma de practicar lo que más me interesa de la industria: traducir lo complejo.</p>
-  <div class="grid social" style="margin-top:32px">
-    <a class="card" href="https://www.instagram.com/bertamunoz_02/" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-      <span><b>Instagram</b><small>@bertamunoz_02</small></span>
-    </a>
-    <a class="card" href="https://www.tiktok.com/@bertamunoz_02" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2.4 1.9 4 4.5 4.2v3.2c-1.7 0-3.2-.5-4.5-1.4v6.4a5.7 5.7 0 1 1-5.7-5.7c.3 0 .6 0 .9.1v3.3a2.5 2.5 0 1 0 1.6 2.3V3h3.2z"/></svg>
-      <span><b>TikTok</b><small>@bertamunoz_02</small></span>
-    </a>
-    <a class="card" href="https://www.linkedin.com/in/berta-mu%C3%B1oz-aranguren-686728281/" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21h-4z"/></svg>
-      <span><b>LinkedIn</b><small>Berta Muñoz Aranguren</small></span>
-    </a>
+<section class="sec" id="perfil">
+  <div class="head">
+    <span class="num">1.</span>
+    <h2>Perfil</h2>
+    <p class="sub">Quién soy y qué busco.</p>
   </div>
-</div></section>
-
-<section id="intereses"><div class="wrap">
-  <div class="eyebrow">Intereses profesionales</div>
-  <h2>Dónde quiero aportar</h2>
-  <div class="grid" style="margin-top:32px">
-    <div class="card"><div class="ico">💊</div><h3>Medical Affairs & MSL</h3><p>Puente entre ciencia y práctica clínica. Comunicar evidencia a profesionales sanitarios con rigor.</p></div>
-    <div class="card"><div class="ico">📋</div><h3>Regulatory Affairs</h3><p>Registro de medicamentos, documentación técnica, EMA y AEMPS. Orden y detalle.</p></div>
-    <div class="card"><div class="ico">📈</div><h3>Market Access</h3><p>Que el fármaco llegue al paciente: valor, precio y financiación.</p></div>
-    <div class="card"><div class="ico">🧬</div><h3>Biotech & I+D</h3><p>Terapias avanzadas, ensayos clínicos y todo lo que todavía está por descubrir.</p></div>
+  <div class="body">
+    <p class="big">Me interesa el camino que va de la investigación al paciente: el ensayo clínico, el desarrollo del fármaco y cómo se comunica todo ello.</p>
+    <p style="margin-top:22px">Soy bióloga por la Universidad de Córdoba. Durante la carrera investigué en epigenética y reparación del ADN y trabajé en transferencia de tecnología en el IMIBIC, donde vi de cerca cómo un resultado de laboratorio se convierte en una patente y en una aplicación real.</p>
+    <p>Después me he especializado en industria farmacéutica y ensayos clínicos: un máster en Especialidades Biológicas Hospitalarias, certificación ICH-GCP E6 (R3) y, este curso, el Máster de Acceso a Industria Farmacéutica, Biotecnológica y de Tecnología Sanitaria de FarmaLeaders Talento.</p>
+    <p>En paralelo fundé Con B de Biología, un proyecto de divulgación sobre biología, investigación biomédica e innovación. Traducir ciencia compleja para públicos amplios me ha dado una capacidad de comunicación que quiero poner al servicio de la investigación clínica.</p>
   </div>
-  <div class="pills">
-    <span>Farmacología</span><span>Farmacoterapia</span><span>Atención farmacéutica</span><span>Comunicación científica</span><span>Creación de contenido</span><span>Redacción médica</span><span>Análisis crítico de literatura</span><span>Trabajo en equipo</span><span>Inglés científico</span>
-  </div>
-</div></section>
+</section>
 
-<section id="contacto" class="contact"><div class="wrap">
-  <div class="eyebrow">Contacto</div>
-  <h2>¿Hablamos?</h2>
-  <p>Si buscas a alguien con base científica sólida, buena comunicación y muchas ganas de aprender, escríbeme.</p>
-  <div class="cta" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-    <a class="btn primary" href="mailto:TODO@email.com">Enviar email</a>
-    <a class="btn ghost" href="https://www.linkedin.com/in/berta-mu%C3%B1oz-aranguren-686728281/" target="_blank" rel="noopener">Conectar en LinkedIn</a>
+<section class="sec" id="areas">
+  <div class="head">
+    <span class="num">2.</span>
+    <h2>Áreas de interés</h2>
+    <p class="sub">Funciones donde encaja mi perfil, en pharma, biotech y health tech.</p>
   </div>
-</div></section>
+  <div class="body">
+    <ul class="ind" style="margin-top:0">
+      <li><span class="code">2.1</span><div><h3>Investigación clínica y ensayos clínicos</h3><p>Coordinación de estudios, monitorización (CRA/CTA) y documentación bajo ICH-GCP. Mi área principal.</p></div></li>
+      <li><span class="code">2.2</span><div><h3>Medical Affairs y MSL</h3><p>Trasladar evidencia científica a profesionales sanitarios y equipos internos con rigor y claridad.</p></div></li>
+      <li><span class="code">2.3</span><div><h3>Regulatory Affairs</h3><p>Dossieres, fichas técnicas y procedimientos ante EMA y AEMPS. Precisión y método con documentación compleja.</p></div></li>
+      <li><span class="code">2.4</span><div><h3>Transferencia de tecnología e innovación</h3><p>Propiedad intelectual, patentes y traslación de la investigación biomédica al mercado.</p></div></li>
+      <li><span class="code">2.5</span><div><h3>Comunicación científica y medical writing</h3><p>Materiales para pacientes y profesionales, formación interna y contenido divulgativo.</p></div></li>
+      <li><span class="code">2.6</span><div><h3>Health tech y salud digital</h3><p>Contenido clínico, educación al paciente y validación científica en productos digitales de salud.</p></div></li>
+    </ul>
+  </div>
+</section>
 
-<footer>© 2026 Berta Muñoz Aranguren</footer>
+<section class="sec" id="competencias">
+  <div class="head">
+    <span class="num">3.</span>
+    <h2>Competencias</h2>
+    <p class="sub">Lo que aporto desde el primer día.</p>
+  </div>
+  <div class="body">
+    <ul class="rows">
+      <li><span class="k">Investigación clínica</span><div class="v">Ensayos clínicos · Buenas prácticas clínicas (ICH-GCP E6 R3) · Coordinación de proyectos · Metodología y documentación científica</div></li>
+      <li><span class="k">Laboratorio</span><div class="v">Biología molecular · PCR · Cultivo celular · Extracción de ADN · Electroforesis en gel</div></li>
+      <li><span class="k">Comunicación</span><div class="v">Divulgación científica en vídeo · Redacción para públicos no expertos · Guion, grabación y edición · Gestión de contenido científico</div></li>
+      <li><span class="k">Herramientas</span><div class="v">Python · Excel · Bases de datos científicas y de patentes</div></li>
+      <li><span class="k">Idiomas</span><div class="v">Español nativo · Inglés B2 First (Cambridge English)</div></li>
+      <li><span class="k">Certificaciones</span><div class="v">ICH-GCP E6 (R3), The Global Health Network<small>Medical Affairs Department y Pharmaceutical Marketing, FarmaLeaders Talento · Python, Stanford University</small></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="recorrido">
+  <div class="head">
+    <span class="num">4.</span>
+    <h2>Formación y experiencia</h2>
+  </div>
+  <div class="body">
+    <ul class="tl">
+      <li><span class="when now">2026 – 2027</span><div><h3>Máster de Acceso a Industria Farmacéutica, Biotecnológica y de Tecnología Sanitaria</h3><p>FarmaLeaders Talento.</p></div></li>
+      <li><span class="when now">2026 – hoy</span><div><h3>Monitora científica · Cienciaterapia</h3><p>Apoyo a las actividades científicas y educativas de la organización. Planificación y coordinación de actividades e iniciativas relacionadas con la ciencia.</p></div></li>
+      <li><span class="when">2024 – 2026</span><div><h3>Máster en Especialidades Biológicas Hospitalarias</h3><p>Universidad a Distancia de Madrid (UDIMA).</p></div></li>
+      <li><span class="when">2024 – hoy</span><div><h3>Fundadora y divulgadora · Con B de Biología</h3><p>Proyecto de divulgación sobre biología, investigación biomédica e innovación científica. Creación y gestión de contenido para públicos amplios.</p></div></li>
+      <li><span class="when">Jun – Sep 2023</span><div><h3>Técnica de Innovación y Transferencia de Tecnología · IMIBIC</h3><p>Apoyo a la transferencia de tecnología en un entorno de investigación biomédica. Trabajo con información científica y de patentes, propiedad intelectual y traslación de resultados a aplicaciones reales.</p></div></li>
+      <li><span class="when">2022 – 2024</span><div><h3>Investigadora pregrado · Epigenética y reparación del ADN</h3><p>Universidad de Córdoba. Biología molecular, metodología científica y documentación de investigación.</p></div></li>
+      <li><span class="when">2020 – 2024</span><div><h3>Grado en Biología</h3><p>Universidad de Córdoba.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="divulgacion">
+  <div class="head">
+    <span class="num">5.</span>
+    <h2>Con B de Biología</h2>
+    <p class="sub">Proyecto de divulgación que fundé en 2024 sobre biología, investigación biomédica e innovación científica.</p>
+  </div>
+  <div class="body">
+    <ul class="social">
+      <li><a href="https://www.instagram.com/bertamunoz_02/" target="_blank" rel="noopener"><span class="plat">Instagram</span><span class="handle">@bertamunoz_02<small>Reels y stories de divulgación científica</small></span><span class="arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 13 13 3M5 3h8v8"/></svg></span></a></li>
+      <li><a href="https://www.tiktok.com/@bertamunoz_02" target="_blank" rel="noopener"><span class="plat">TikTok</span><span class="handle">@bertamunoz_02<small>Vídeos cortos sobre biología e investigación</small></span><span class="arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 13 13 3M5 3h8v8"/></svg></span></a></li>
+      <li><a href="https://www.linkedin.com/in/berta-mu%C3%B1oz-aranguren-686728281/" target="_blank" rel="noopener"><span class="plat">LinkedIn</span><span class="handle">Berta Muñoz Aranguren<small>Perfil profesional y trayectoria</small></span><span class="arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 13 13 3M5 3h8v8"/></svg></span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <span class="mono">6. Contacto</span>
+  <h2>Si buscas perfil científico para investigación clínica y comunicación, hablamos.</h2>
+  <a class="mail" href="mailto:bertamunoz02@gmail.com">bertamunoz02@gmail.com</a>
+  <p class="alt">También por <a href="https://www.linkedin.com/in/berta-mu%C3%B1oz-aranguren-686728281/" target="_blank" rel="noopener">LinkedIn</a>. Abierta a prácticas y primer empleo en investigación clínica, industria farmacéutica, biotech y health tech. Disponibilidad para movilidad.</p>
+</section>
+
+<footer>
+  <span class="mono">Berta Muñoz Aranguren · 2026</span>
+  <span class="mono">Última actualización: septiembre 2026</span>
+</footer>
+
+</div>
 </body>
 </html>
