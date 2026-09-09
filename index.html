@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Berta Muñoz Aranguren · Farmacia & divulgación</title>
+<meta name="description" content="Berta Muñoz Aranguren, farmacéutica y divulgadora científica. Próximo máster en industria farmacéutica. Buscando mi primer paso en biotech y big pharma.">
+<meta property="og:title" content="Berta Muñoz Aranguren">
+<meta property="og:description" content="Farmacia, divulgación científica y ganas de construir carrera en la industria farmacéutica.">
+<meta property="og:image" content="foto.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f6f1;--ink:#17201f;--muted:#5d6866;--line:#e2e0d7;
+  --teal:#0f766e;--teal-soft:#d9f0ec;--pill:#eef2ef;--card:#ffffff;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#101615;--ink:#eef2ef;--muted:#9aa8a4;--line:#243230;
+  --teal:#5fd3c4;--teal-soft:#153a36;--pill:#1a2624;--card:#161f1e}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.1;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2.4rem,6vw,4.2rem)}
+h2{font-size:clamp(1.6rem,3vw,2.2rem)}
+h3{font-size:1.15rem}
+p{margin:0 0 1em}
+a{color:var(--teal)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:72px 0;border-top:1px solid var(--line)}
+.eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+
+/* nav */
+nav{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:9}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+nav b{font-family:Fraunces,serif;font-size:1.1rem}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+nav a{color:var(--ink);text-decoration:none;font-size:.9rem;font-weight:500}
+nav a:hover{color:var(--teal)}
+@media(max-width:640px){nav ul{display:none}}
+
+/* hero */
+header{padding:80px 0 72px}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:52ch}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:600;text-decoration:none;border:1.5px solid var(--teal);transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:var(--teal);color:#fff}
+.btn.ghost{color:var(--teal)}
+.photo{aspect-ratio:4/5;border-radius:24px;background:var(--teal-soft);overflow:hidden;position:relative;box-shadow:0 30px 60px -30px rgba(0,0,0,.35)}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo .ph{position:absolute;inset:0;display:grid;place-items:center;color:var(--teal);font-family:Fraunces,serif;font-size:5rem}
+.tag{display:inline-block;background:var(--teal-soft);color:var(--teal);padding:6px 14px;border-radius:999px;font-size:.85rem;font-weight:600;margin-bottom:20px}
+
+/* grids & cards */
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+.card .ico{width:40px;height:40px;border-radius:12px;background:var(--teal-soft);display:grid;place-items:center;margin-bottom:14px;color:var(--teal)}
+.card p{color:var(--muted);margin:0;font-size:.95rem}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.pills span{background:var(--pill);border:1px solid var(--line);padding:6px 12px;border-radius:999px;font-size:.85rem}
+
+/* two-col about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+.about p{color:var(--muted)}
+.facts{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.facts li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.facts li b{min-width:120px;color:var(--ink)}
+.facts li span{color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;padding:0;margin:0;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 32px 28px}
+.tl li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px var(--bg)}
+.tl small{display:block;color:var(--teal);font-weight:600;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.tl p{color:var(--muted);margin:4px 0 0}
+
+/* social */
+.social a{display:flex;align-items:center;gap:16px;text-decoration:none;color:var(--ink)}
+.social .card{transition:border-color .15s,transform .15s}
+.social .card:hover{border-color:var(--teal);transform:translateY(-2px)}
+.social svg{width:28px;height:28px;flex:none}
+.social small{display:block;color:var(--muted)}
+
+/* contact */
+.contact{text-align:center;padding:90px 0}
+.contact p{max-width:48ch;margin:0 auto 28px;color:var(--muted)}
+footer{padding:28px 0;color:var(--muted);font-size:.85rem;text-align:center;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <b>Berta Muñoz</b>
+  <ul>
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#formacion">Formación</a></li>
+    <li><a href="#divulgacion">Divulgación</a></li>
+    <li><a href="#intereses">Intereses</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</div></nav>
+
+<header class="wrap">
+  <div class="hero">
+    <div>
+      <span class="tag">🔬 Abierta a prácticas y primer empleo en industria farma</span>
+      <h1>Farmacia, ciencia<br>y ganas de contarla.</h1>
+      <p class="lead">Soy Berta, graduada en Farmacia y divulgadora científica. Este curso empiezo un máster en industria farmacéutica y busco mi primer paso en una <strong>biotech</strong> o una <strong>big pharma</strong>.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://www.linkedin.com/in/berta-mu%C3%B1oz-aranguren-686728281/" target="_blank" rel="noopener">Ver LinkedIn</a>
+        <a class="btn ghost" href="cv.pdf">Descargar CV</a>
+      </div>
+    </div>
+    <div class="photo">
+      <!-- TODO: sube foto.jpg (formato vertical) y borra el div .ph -->
+      <div class="ph">B</div>
+      <!-- <img src="foto.jpg" alt="Berta Muñoz Aranguren"> -->
+    </div>
+  </div>
+</header>
+
+<section id="sobre-mi"><div class="wrap about">
+  <div>
+    <div class="eyebrow">Sobre mí</div>
+    <h2>Del laboratorio a la pantalla, y de la pantalla a la industria.</h2>
+    <p>Me gusta entender cómo funciona un fármaco y, sobre todo, explicarlo para que cualquiera lo entienda. Llevo tiempo divulgando en redes sobre farmacia, salud y ciencia, y eso me ha enseñado algo que la industria valora: comunicar con rigor y con claridad a la vez.</p>
+    <p>Ahora quiero llevar esa mezcla de conocimiento técnico y comunicación al lugar donde los medicamentos se desarrollan, se registran y llegan al paciente.</p>
+  </div>
+  <ul class="facts">
+    <li><b>Formación</b><span>Grado en Farmacia · TODO universidad</span></li>
+    <li><b>Próximo paso</b><span>Máster en Industria Farmacéutica · TODO nombre y centro (2026–2027)</span></li>
+    <li><b>Ubicación</b><span>TODO ciudad · disponibilidad para moverme</span></li>
+    <li><b>Idiomas</b><span>Español (nativo) · Inglés (TODO nivel)</span></li>
+    <li><b>Busco</b><span>Prácticas / junior en Medical Affairs, Regulatory, MSL, Market Access o Comunicación científica</span></li>
+  </ul>
+</div></section>
+
+<section id="formacion"><div class="wrap">
+  <div class="eyebrow">Formación y experiencia</div>
+  <h2>Recorrido</h2>
+  <ul class="tl" style="margin-top:32px">
+    <li><small>2026 – 2027</small><h3>Máster en Industria Farmacéutica</h3><p>TODO centro. Enfoque en desarrollo, registro y acceso al mercado de medicamentos.</p></li>
+    <li><small>TODO años</small><h3>Grado en Farmacia</h3><p>TODO universidad. TODO: TFG, menciones, asignaturas destacadas.</p></li>
+    <li><small>TODO años</small><h3>Prácticas tuteladas en oficina de farmacia / hospital</h3><p>TODO: atención farmacéutica, dispensación, seguimiento de tratamientos.</p></li>
+    <li><small>2023 – hoy</small><h3>Divulgación científica en redes</h3><p>Creación de contenido sobre farmacia y salud en Instagram y TikTok. TODO: seguidores, visualizaciones, colaboraciones.</p></li>
+  </ul>
+</div></section>
+
+<section id="divulgacion"><div class="wrap">
+  <div class="eyebrow">Divulgación</div>
+  <h2>Donde cuento la ciencia</h2>
+  <p style="color:var(--muted);max-width:56ch">Hago contenido corto y riguroso sobre medicamentos, mitos de salud y vida de estudiante de Farmacia. Es mi forma de practicar lo que más me interesa de la industria: traducir lo complejo.</p>
+  <div class="grid social" style="margin-top:32px">
+    <a class="card" href="https://www.instagram.com/bertamunoz_02/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+      <span><b>Instagram</b><small>@bertamunoz_02</small></span>
+    </a>
+    <a class="card" href="https://www.tiktok.com/@bertamunoz_02" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2.4 1.9 4 4.5 4.2v3.2c-1.7 0-3.2-.5-4.5-1.4v6.4a5.7 5.7 0 1 1-5.7-5.7c.3 0 .6 0 .9.1v3.3a2.5 2.5 0 1 0 1.6 2.3V3h3.2z"/></svg>
+      <span><b>TikTok</b><small>@bertamunoz_02</small></span>
+    </a>
+    <a class="card" href="https://www.linkedin.com/in/berta-mu%C3%B1oz-aranguren-686728281/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21h-4z"/></svg>
+      <span><b>LinkedIn</b><small>Berta Muñoz Aranguren</small></span>
+    </a>
+  </div>
+</div></section>
+
+<section id="intereses"><div class="wrap">
+  <div class="eyebrow">Intereses profesionales</div>
+  <h2>Dónde quiero aportar</h2>
+  <div class="grid" style="margin-top:32px">
+    <div class="card"><div class="ico">💊</div><h3>Medical Affairs & MSL</h3><p>Puente entre ciencia y práctica clínica. Comunicar evidencia a profesionales sanitarios con rigor.</p></div>
+    <div class="card"><div class="ico">📋</div><h3>Regulatory Affairs</h3><p>Registro de medicamentos, documentación técnica, EMA y AEMPS. Orden y detalle.</p></div>
+    <div class="card"><div class="ico">📈</div><h3>Market Access</h3><p>Que el fármaco llegue al paciente: valor, precio y financiación.</p></div>
+    <div class="card"><div class="ico">🧬</div><h3>Biotech & I+D</h3><p>Terapias avanzadas, ensayos clínicos y todo lo que todavía está por descubrir.</p></div>
+  </div>
+  <div class="pills">
+    <span>Farmacología</span><span>Farmacoterapia</span><span>Atención farmacéutica</span><span>Comunicación científica</span><span>Creación de contenido</span><span>Redacción médica</span><span>Análisis crítico de literatura</span><span>Trabajo en equipo</span><span>Inglés científico</span>
+  </div>
+</div></section>
+
+<section id="contacto" class="contact"><div class="wrap">
+  <div class="eyebrow">Contacto</div>
+  <h2>¿Hablamos?</h2>
+  <p>Si buscas a alguien con base científica sólida, buena comunicación y muchas ganas de aprender, escríbeme.</p>
+  <div class="cta" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <a class="btn primary" href="mailto:TODO@email.com">Enviar email</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/berta-mu%C3%B1oz-aranguren-686728281/" target="_blank" rel="noopener">Conectar en LinkedIn</a>
+  </div>
+</div></section>
+
+<footer>© 2026 Berta Muñoz Aranguren</footer>
+</body>
+</html>
