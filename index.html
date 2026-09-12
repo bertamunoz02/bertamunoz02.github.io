@@ -151,6 +151,163 @@ p{margin:0}
 
 footer{border-top:1.5px solid var(--ink);padding-block:20px 40px;display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between;color:var(--muted)}
 
+.skill-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:0;
+  border-top:1.5px solid var(--ink);
+}
+
+.skill-card{
+  padding:28px 24px 30px 0;
+  border-bottom:1px solid var(--rule);
+}
+
+.skill-card:nth-child(odd){
+  padding-right:32px;
+  border-right:1px solid var(--rule);
+}
+
+.skill-card:nth-child(even){
+  padding-left:32px;
+}
+
+.skill-code{
+  font-family:var(--mono);
+  color:var(--blue);
+  font-size:.78rem;
+  letter-spacing:.05em;
+}
+
+.skill-card h3{
+  margin-top:10px;
+  font-size:1.35rem;
+  font-weight:600;
+  line-height:1.15;
+  letter-spacing:-.01em;
+}
+
+.skill-card p{
+  margin-top:9px;
+  color:var(--muted);
+  font-size:.96rem;
+  line-height:1.5;
+}
+
+.credentials{
+  grid-column:1/-1;
+  margin-top:clamp(40px,6vw,72px);
+  border-top:1.5px solid var(--ink);
+}
+
+.credentials-head{
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:24px;
+  padding:22px 0;
+  border-bottom:1px solid var(--rule);
+}
+
+.credentials-head .mono{
+  color:var(--blue);
+}
+
+.credentials-head h3{
+  font-size:1.25rem;
+  font-weight:600;
+  line-height:1.2;
+}
+
+.credentials-list{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+
+.credentials-list > div{
+  padding:22px 20px 24px 0;
+  border-right:1px solid var(--rule);
+}
+
+.credentials-list > div + div{
+  padding-left:20px;
+}
+
+.credentials-list > div:last-child{
+  border-right:0;
+}
+
+.credential-type{
+  display:block;
+  font-family:var(--mono);
+  color:var(--muted);
+  font-size:.7rem;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+
+.credentials-list strong{
+  display:block;
+  font-size:1rem;
+  line-height:1.25;
+  font-weight:600;
+}
+
+.credentials-list small{
+  display:block;
+  color:var(--muted);
+  font-size:.85rem;
+  margin-top:5px;
+}
+
+@media(max-width:860px){
+  .skill-grid{
+    grid-template-columns:1fr;
+  }
+
+  .skill-card,
+  .skill-card:nth-child(odd),
+  .skill-card:nth-child(even){
+    padding:22px 0;
+    border-right:0;
+  }
+
+  .credentials-head{
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+
+  .credentials-list{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .credentials-list > div,
+  .credentials-list > div + div{
+    padding:20px 16px 20px 0;
+  }
+
+  .credentials-list > div:nth-child(2n){
+    padding-left:16px;
+    border-right:0;
+  }
+}
+
+@media(max-width:480px){
+  .credentials-list{
+    grid-template-columns:1fr;
+  }
+
+  .credentials-list > div,
+  .credentials-list > div + div{
+    padding:18px 0;
+    border-right:0;
+  }
+
+  .credentials-list > div + div{
+    border-top:1px solid var(--rule);
+  }
+}
+  
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .hero > *{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
 .hero .figure{animation-delay:.1s}
@@ -237,17 +394,76 @@ footer{border-top:1.5px solid var(--ink);padding-block:20px 40px;display:flex;fl
   <div class="head">
     <span class="num">3.</span>
     <h2>Competencias</h2>
-    <p class="sub">Lo que aporto desde el primer día.</p>
+    <p class="sub">Conocimientos y herramientas que aporto a equipos científicos y multidisciplinares.</p>
   </div>
+
   <div class="body">
-    <ul class="rows">
-      <li><span class="k">Investigación clínica</span><div class="v">Ensayos clínicos · Buenas prácticas clínicas (ICH-GCP E6 R3) · Coordinación de proyectos · Metodología y documentación científica</div></li>
-      <li><span class="k">Laboratorio</span><div class="v">Biología molecular · PCR · Cultivo celular · Extracción de ADN · Electroforesis en gel</div></li>
-      <li><span class="k">Comunicación</span><div class="v">Divulgación científica en vídeo · Redacción para públicos no expertos · Guion, grabación y edición · Gestión de contenido científico</div></li>
-      <li><span class="k">Herramientas</span><div class="v">Python · Excel · Bases de datos científicas y de patentes</div></li>
-      <li><span class="k">Idiomas</span><div class="v">Español nativo · Inglés B2 First (Cambridge English)</div></li>
-      <li><span class="k">Certificaciones</span><div class="v">ICH-GCP E6 (R3), The Global Health Network<small>Medical Affairs Department y Pharmaceutical Marketing, FarmaLeaders Talento · Python, Stanford University</small></div></li>
-    </ul>
+    <div class="skill-grid">
+
+      <article class="skill-card">
+        <span class="skill-code">01</span>
+        <h3>Investigación clínica</h3>
+        <p>Ensayos clínicos · ICH-GCP E6 (R3) · Documentación científica · Análisis e interpretación de evidencia · Metodología de investigación</p>
+      </article>
+
+      <article class="skill-card">
+        <span class="skill-code">02</span>
+        <h3>Investigación biomédica</h3>
+        <p>Biología molecular · PCR · Extracción de ADN · Electroforesis en gel · Documentación y trazabilidad</p>
+      </article>
+
+      <article class="skill-card">
+        <span class="skill-code">03</span>
+        <h3>Transferencia e innovación</h3>
+        <p>Vigilancia tecnológica · Búsqueda y análisis de patentes · Propiedad intelectual · Revisión del estado del arte · Transferencia de resultados</p>
+      </article>
+
+      <article class="skill-card">
+        <span class="skill-code">04</span>
+        <h3>Comunicación científica</h3>
+        <p>Divulgación científica · Redacción y guion científico · Comunicación para públicos no especializados · Creación de contenido audiovisual · Gestión de proyectos de divulgación</p>
+      </article>
+
+      <article class="skill-card">
+        <span class="skill-code">05</span>
+        <h3>Herramientas digitales</h3>
+        <p>Microsoft 365 · Canva · Python · Bases de datos científicas · Bases de datos de patentes · Herramientas de búsqueda bibliográfica</p>
+      </article>
+
+    </div>
+  </div>
+
+  <div class="credentials">
+    <div class="credentials-head">
+      <span class="mono">Acreditaciones</span>
+      <h3>Certificaciones y formación especializada</h3>
+    </div>
+
+    <div class="credentials-list">
+      <div>
+        <span class="credential-type">Certificación</span>
+        <strong>ICH-GCP E6 (R3)</strong>
+        <small>The Global Health Network</small>
+      </div>
+
+      <div>
+        <span class="credential-type">Programa</span>
+        <strong>Medical Affairs Department</strong>
+        <small>FarmaLeaders Talento</small>
+      </div>
+
+      <div>
+        <span class="credential-type">Programa</span>
+        <strong>Pharmaceutical Marketing</strong>
+        <small>FarmaLeaders Talento</small>
+      </div>
+
+      <div>
+        <span class="credential-type">Curso</span>
+        <strong>Code in Place</strong>
+        <small>Stanford University · Python</small>
+      </div>
+    </div>
   </div>
 </section>
 
