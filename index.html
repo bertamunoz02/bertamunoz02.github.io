@@ -215,15 +215,8 @@ footer{border-top:1.5px solid var(--ink);padding-block:20px 40px;display:flex;fl
 }
 
 .credentials-head{
-  display:grid;
-  grid-template-columns:1fr 2fr;
-  gap:24px;
   padding:22px 0;
   border-bottom:1px solid var(--rule);
-}
-
-.credentials-head .mono{
-  color:var(--blue);
 }
 
 .credentials-head h3{
@@ -281,14 +274,11 @@ footer{border-top:1.5px solid var(--ink);padding-block:20px 40px;display:flex;fl
 
   .skill-card,
   .skill-card:nth-child(odd),
-  .skill-card:nth-child(even){
+  .skill-card:nth-child(even)
+  .skill-card:nth-child(5){
+    width:100%;
     padding:22px 0;
     border-right:0;
-  }
-
-  .credentials-head{
-    grid-template-columns:1fr;
-    gap:8px;
   }
 
   .credentials-list{
@@ -449,7 +439,6 @@ footer{border-top:1.5px solid var(--ink);padding-block:20px 40px;display:flex;fl
 
   <div class="credentials">
     <div class="credentials-head">
-      <span class="mono">Acreditaciones</span>
       <h3>Certificaciones y formación especializada</h3>
     </div>
 
