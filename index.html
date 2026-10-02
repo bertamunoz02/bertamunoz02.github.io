@@ -319,6 +319,19 @@ footer{border-top:1.5px solid var(--ink);padding-block:20px 40px;display:flex;fl
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .hero > *{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
 .hero .figure{animation-delay:.1s}
+.media{margin-bottom:48px}
+.media video{width:100%;height:auto;display:block;background:#111418;border:1.5px solid var(--ink)}
+.media figure{margin:0}
+.media figcaption{font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-top:10px;line-height:1.5}
+.media .pair{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
+.media .pair img{width:100%;height:auto;display:block;border:1.5px solid var(--ink)}
+.media .press{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:20px;align-items:center;margin-top:28px;text-decoration:none;border:1.5px solid var(--ink);font-size:1.25rem;font-weight:600;letter-spacing:-.015em;line-height:1.2;transition:background .15s}
+.media .press:hover{background:#fff}
+.media .press img{width:100%;height:100%;min-height:150px;object-fit:cover;display:block}
+.media .press span{padding:16px 20px 16px 0}
+.media .press small{display:block;font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:400;margin-bottom:8px}
+@media(max-width:480px){.media .press{grid-template-columns:1fr;gap:0}.media .press span{padding:16px}}
+@media(max-width:700px){.media .pair{grid-template-columns:1fr}}
 </style>
 <script data-goatcounter="https://bertamunoz02.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -365,7 +378,7 @@ footer{border-top:1.5px solid var(--ink);padding-block:20px 40px;display:flex;fl
 <div class="strip">
   <div><span class="mono">Formación</span><p>Grado en Biología · Universidad de Córdoba</p></div>
   <div><span class="mono">En curso</span><p>Máster de Acceso a Industria Farmacéutica, Biotecnológica y de Tecnologías sanitarias con certificación en gestión y monitorización de ensayos clínicos · Marketing Farmacéutico · Departamento Médico </p></div>
-  <div><span class="mono">Idiomas</span><p>Español nativo · Inglés B2 First (Cambridge)</p></div>
+  <div><span class="mono">Idiomas</span><p>Español nativo · Inglés C1 · Francés A2</p></div>
   <div><span class="mono">Divulgación</span><p>Con B de Biología · Canal de difusión sobre Biología e Innovación científica</p></div>
 </div>
 
@@ -501,6 +514,20 @@ footer{border-top:1.5px solid var(--ink);padding-block:20px 40px;display:flex;fl
     <p class="sub">Proyecto de divulgación que fundé en 2024 sobre biología, investigación biomédica e innovación científica.</p>
   </div>
   <div class="body">
+    <div class="media">
+      <figure>
+        <video controls preload="metadata" playsinline poster="media/entrevista_tv_poster.jpg">
+          <source src="media/entrevista_tv.mp4" type="video/mp4">
+        </video>
+        <figcaption>Entrevista en televisión sobre Con B de Biología</figcaption>
+      </figure>
+      <div class="pair">
+        <figure><img src="media/cartel-hombre-y-tierra.jpg" alt="Cartel de la jornada 50 años de legado de la serie El Hombre y la Tierra, Universidad de Córdoba, 23 de abril de 2024" loading="lazy"><figcaption>50 años de «El Hombre y la Tierra» · Universidad de Córdoba, 2024 · conductora</figcaption></figure>
+        <figure><img src="media/berta-presentando.jpg" alt="Berta Muñoz presentando en el atril durante la jornada sobre El Hombre y la Tierra" loading="lazy"><figcaption>Presentando la jornada en el Campus de Rabanales</figcaption></figure>
+        <figure><img src="media/cartel-exoplanetas.jpg" alt="Cartel de la charla Exoplanetas y vida: de la Tierra al TikTok, 18 de abril, Campus de Rabanales" loading="lazy"><figcaption>Exoplanetas y vida: de la Tierra al TikTok · 18 de abril</figcaption></figure>
+      </div>
+      <a class="press" href="https://www.diariocordoba.com/universidad/2024/04/24/compaginar-bata-bota-101456345.html" target="_blank" rel="noopener"><img src="media/diario-cordoba-portada.jpg" alt="Berta Muñoz durante su charla sobre exoplanetas en la Universidad de Córdoba" loading="lazy"><span><small>Diario de Córdoba · 24/04/2024</small>Compaginar bata y bota</span></a>
+    </div>
     <ul class="social">
       <li><a href="https://www.instagram.com/bertamunoz_02/" target="_blank" rel="noopener"><span class="plat">Instagram</span><span class="handle">@bertamunoz_02<small>Reels y stories de divulgación científica</small></span><span class="arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 13 13 3M5 3h8v8"/></svg></span></a></li>
       <li><a href="https://www.tiktok.com/@bertamunoz_02" target="_blank" rel="noopener"><span class="plat">TikTok</span><span class="handle">@bertamunoz_02<small>Vídeos cortos sobre biología e investigación</small></span><span class="arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 13 13 3M5 3h8v8"/></svg></span></a></li>
@@ -519,7 +546,7 @@ footer{border-top:1.5px solid var(--ink);padding-block:20px 40px;display:flex;fl
 
 <footer>
   <span class="mono">Berta Muñoz Aranguren · 2026</span>
-  <span class="mono">Última actualización: septiembre 2026</span>
+  <span class="mono">Última actualización: octubre 2026</span>
 </footer>
 
 </div>
